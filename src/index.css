@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 * {
     box-sizing: border-box;
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Helvetica", sans-serif;
 }
 body {
     margin: 0;
@@ -14,12 +14,12 @@ body {
     min-height: 100vh;
     padding: 30px;
 }
-.clock__container {
+.header__container {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20vh;
+    height: 30vh;
     background-color: #e1e1e1;
     margin-bottom: 30px;
 }

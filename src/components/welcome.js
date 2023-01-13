@@ -11,9 +11,8 @@ const Welcome = ({username}) => {
 	}, []);
 
 	return (
-		<div className='clock__container'>
+		<div className='header__container'>
 			<h1 className='welcome'>Welcome {username}!</h1>
-			<h2 className='clock'>{date.toLocaleString()}</h2>
 		</div>
 	);
 };

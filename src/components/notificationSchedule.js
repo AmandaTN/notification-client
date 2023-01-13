@@ -4,7 +4,7 @@ import clients from "../data/clients";
 
 const NotificationSchedule = ({ socket }) => {
   const [date, setDate] = useState(new Date());
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState("Child Care");
   const [subject, setSubject] = useState("");
   const [body, setBody] = useState("");
   const [inter, setInter] = useState(1);
@@ -12,7 +12,6 @@ const NotificationSchedule = ({ socket }) => {
 
 	useEffect( () => {
 		const interval = setInterval(() => {
-			console.log()
 			if (inter !== clients.length+1) {
 				setDate(date.toLocaleString());
 				setTitle(clients[inter].category.name);
@@ -26,15 +25,11 @@ const NotificationSchedule = ({ socket }) => {
 			  }
 		}, 10000)
 		return () => clearInterval(interval);
-	},[])
+	},[inter])
 
   const sendNotification = () => {
     socket.emit("newSchedule", { date, title, subject, body });
-    toast.success(`${title} has been added successfully!`);
-    setDate(date.getDate().toLocaleString());
-    setTitle("");
-    setSubject("");
-    setBody("");
+    toast.success(`${title} sent you a message!`);
   };
 
   return <div className="notificationchedule__container"></div>;

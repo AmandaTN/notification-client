@@ -23,9 +23,16 @@ body {
     background-color: #e1e1e1;
     margin-bottom: 30px;
 }
+
+.welcome_container img {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto 20px;
+}
 .welcome {
     font-size: 70px;
     color: #003f7d;
+    display: block;
 }
 .createSchedule__container {
     margin-bottom: 30px;

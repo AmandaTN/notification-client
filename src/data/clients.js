@@ -18,6 +18,12 @@ const clients = [
     name: "Claire Martin",
     category: { id: clientCategory[2].id, name: clientCategory[2].name },
   },
+  {
+    id: UID("Sam Smith"),
+    name: "Sam Smith",
+    category: { id: clientCategory[1].id, name: clientCategory[1].name },
+  },
+  
 ];
 
 export default clients;

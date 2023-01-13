@@ -1,4 +1,5 @@
 import socketIO from "socket.io-client";
+// eslint-disable-next-line
 const socket = socketIO.connect("http://localhost:4000");
 
 function App() {
